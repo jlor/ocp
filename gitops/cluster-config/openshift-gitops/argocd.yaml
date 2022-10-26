@@ -4,6 +4,8 @@ metadata:
   name: openshift-gitops
   namespace: openshift-gitops
 spec:
+  sso:
+    openShiftOAuth: true
   applicationSet:
     resources:
       limits:
@@ -23,7 +25,6 @@ spec:
         memory: 1Gi
     sharding: {}
   dex:
-    openShiftOAuth: true
     resources:
       limits:
         cpu: 500m
